@@ -532,7 +532,205 @@ public class Jogo{
     }
 
     public static void Float(){
-        System.out.println("1");
+
+
+        class JogoFloat {
+
+            public static void jogarFloat(String nome, int vidaAtual) {
+
+                Scanner scanner = new Scanner(System.in);
+                Random random = new Random();
+
+                int vida = vidaAtual; // mantém a vida do jogador do andar anterior
+                int dano;
+
+                System.out.println("\n");
+                System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+                System.out.println(">>> NOVO ANDAR DESBLOQUEADO: O VALE DOS DECIMAIS <<<");
+                System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+                System.out.println();
+                System.out.println("Date: \"O portal nos trouxe ao Vale dos Decimais... o domínio do Guardião FLOAT.\"");
+                System.out.println("Date: \"Aqui, a precisão e o equilíbrio entre números quebrados definem o destino de quem entra.\"");
+                scanner.nextLine();
+
+                System.out.println("O chão parece líquido, formado por números flutuando em poças cintilantes.");
+                System.out.println("Cada passo causa ondulações de luz, e ao longe, montanhas de código brilham suavemente.");
+                scanner.nextLine();
+
+                System.out.println("Date: \"O Guardião FLOAT dominava a fluidez e a precisão decimal, mas foi corrompido pelo excesso de arredondamentos...\"");
+                System.out.println("Date: \"Devemos restaurar sua integridade antes que o mundo dos cálculos pereça.\"");
+                scanner.nextLine();
+
+                // perguntas sobre FLOAT
+                ArrayList<String> perguntas = new ArrayList<>();
+                ArrayList<String> respostas = new ArrayList<>();
+
+                perguntas.add("O tipo FLOAT em SQL é usado para armazenar valores com?");
+                respostas.add("casas decimais");
+
+                perguntas.add("Qual é a principal diferença entre INT e FLOAT?");
+                respostas.add("float armazena numeros com ponto decimal");
+
+                perguntas.add("Qual desses valores pode ser armazenado em uma coluna FLOAT?");
+                respostas.add("3.14");
+
+                perguntas.add("Se você quiser armazenar a altura de uma pessoa (ex: 1.75), qual tipo deve usar?");
+                respostas.add("float");
+
+                perguntas.add("FLOAT pode armazenar números negativos?");
+                respostas.add("sim");
+
+                perguntas.add("FLOAT é mais indicado para valores aproximados ou exatos?");
+                respostas.add("aproximados");
+
+
+                System.out.println();
+                System.out.println("Enquanto você caminha, pequenas esferas luminosas se erguem das poças.");
+                System.out.println("Elas se juntam, formando criaturas translúcidas — são os *Fragmentos de Precisão!*");
+                System.out.println("Date: \"Essas entidades testarão sua capacidade de compreender o equilíbrio decimal.\"");
+                scanner.nextLine();
+
+
+                String respostaJogador;
+                int fragmentos = 2;
+                int indice = random.nextInt(perguntas.size());
+                while (fragmentos > 0 && vida > 0) {
+
+
+                    System.out.println();
+                    System.out.println("Um Fragmento de Precisão surge diante de você e sussurra:");
+                    System.out.println(perguntas.get(indice));
+                    System.out.print("Sua resposta: ");
+                    respostaJogador = scanner.nextLine().toLowerCase().trim();
+
+                    if (respostaJogador.equalsIgnoreCase(respostas.get(indice))) {
+                        System.out.println("O Fragmento brilha intensamente e se dissolve em uma onda suave de luz azul.");
+                        fragmentos--;
+                        System.out.println("Date: \"Exato, " + nome + "! Sua mente está se ajustando aos cálculos flutuantes.\"");
+                    } else {
+                        dano = random.nextInt(3) + 2;
+                        vida -= dano;
+                        System.out.println("O Fragmento vibra em vermelho e lança um pulso de energia caótica!");
+                        System.out.println("Você sofre " + dano + " pontos de dano! Vida atual: " + vida);
+                        System.out.println("Date: \"Errou... FLOAT lida com números decimais, lembre-se disso!\"");
+                    }
+                }
+
+                if (vida <= 0) {
+                    System.out.println("Você cai de joelhos, sentindo o código se desintegrar ao seu redor...");
+                    System.out.println("O Vale dos Decimais se apaga em silêncio. Sua jornada termina aqui.");
+                    return;
+                }
+
+                System.out.println();
+                System.out.println("Com os Fragmentos derrotados, uma ponte líquida surge diante de você.");
+                System.out.println("Ao atravessá-la, o ambiente muda — o ar fica pesado, e ondas de energia oscilam em padrões caóticos.");
+                scanner.nextLine();
+
+                System.out.println("De repente, uma voz ecoa:");
+                System.out.println("“Inteiros… tão limitados… tão exatos… tão incompletos!”");
+                System.out.println("Das águas de um lago cristalino surge uma criatura translúcida, com corpo líquido e olhos que mudam de forma constantemente.");
+                scanner.nextLine();
+
+                boolean Fluturis = false;
+
+
+                do {
+
+
+                    System.out.println("Seu corpo parece tentar se manter estável, mas as bordas tremem, como se estivesse sempre entre dois valores.");
+                    System.out.println("O nome dela é “Flutuaris, o Instável” — um monstro criado a partir de cálculos perdidos, fragmentos de precisão que o Feitiço Corruptom distorceu.");
+                    scanner.nextLine();
+                    System.out.println("Então Flutuaris te pergunta: ");
+                    System.out.println(perguntas.get(indice));
+                    System.out.print("Sua resposta: ");
+                    respostaJogador = scanner.nextLine().toLowerCase().trim();
+
+                    if (respostaJogador.equalsIgnoreCase(respostas.get(indice))) {
+                      System.out.println("Com o corpo tremendo e a respiração ofegante, o jogador observa as últimas gotas de Flutuaris desaparecerem nas águas.");
+                        System.out.println("Em meio ao silêncio, algo começa a brilhar no fundo do lago — um pequeno cristal azul pulsante.");
+                        System.out.println("Você o segura e sente uma leve vibração percorrer seus dedos.");
+                        System.out.println("\uD83D\uDCDC Você obteve o Fragmento da Precisão!");
+
+                        Fluturis = true;
+                    }else{
+                        dano = random.nextInt(3) + 2;
+                        vida -= dano;
+                        System.out.println("Erro de arredondamento! Prepare-se para sentir o caos dos decimais!");
+                        System.out.println("Sua vida agora é: " + vida);
+                        System.out.println("Fluturis repete a pergunta");
+                    }
+                }while(!Fluturis);
+
+
+                scanner.nextLine();
+                System.out.println("O portal ao fundo do lago começa a reagir ao cristal, projetando feixes de luz que giram lentamente, até formar uma espiral translúcida.");
+                System.out.println("A cada passo dado em direção a ela, o chão parece oscilar, como se o mundo inteiro estivesse flutuando em frações.");
+                System.out.print("Você atravessa o portal.");
+                scanner.nextLine();
+
+                System.out.println("O novo ambiente é um vale suspenso, repleto de plataformas que se movem lentamente — como se flutuassem em um mar invisível.");
+                System.out.println("Ao centro, sobre uma grande rocha, está um ser imponente feito de energia líquida e pura luz decimal.");
+                scanner.nextLine();
+
+                System.out.println("Guardião Float: Então… um mortal ousa equilibrar os valores quebrados?");
+                System.out.println("Guardião Float: Eu sou o Guardião Float, mestre das casas decimais e do equilíbrio entre precisão e caos.");
+                System.out.println("Guardião Float: O mago corrompido tentou me dividir em partes infinitas… mas agora sou a instabilidade em forma pura.");
+                scanner.nextLine();
+
+                System.out.println("O Guardião ergue a mão, e o chão vibra, fragmentando-se em números flutuantes.");
+                System.out.println("Guardião Float: Mostre-me que entende o que é ser aproximado, mas essencial.");
+                System.out.println("Guardião Float: Responda… e prove que domina o mundo dos valores decimais!");
+                scanner.nextLine();
+
+                int vidaBoss = 20;
+
+                ArrayList<String> perguntasBoss = new ArrayList<>();
+                ArrayList<String> respostasBoss = new ArrayList<>();
+
+                perguntasBoss.add("Qual tipo de dado é usado para armazenar valores como 9.81?");
+                respostasBoss.add("float");
+
+                perguntasBoss.add("FLOAT pode armazenar números fracionários?");
+                respostasBoss.add("sim");
+
+                perguntasBoss.add("Qual problema comum ocorre com FLOAT ao lidar com cálculos muito precisos?");
+                respostasBoss.add("arredondamento");
+
+                perguntasBoss.add("Entre INT e FLOAT, qual ocupa mais espaço na memória?");
+                respostasBoss.add("float");
+
+                for (int i = 0; i < perguntasBoss.size() && vidaBoss > 0 && vida > 0; i++) {
+                    System.out.println();
+                    System.out.println("A vida do Guardião FLOAT é: " + vidaBoss);
+                    System.out.println("Guardião FLOAT: \"" + perguntasBoss.get(i) + "\"");
+                    System.out.print("Sua resposta: ");
+                    String resposta = scanner.nextLine().toLowerCase().trim();
+
+                    if (resposta.equalsIgnoreCase(respostasBoss.get(i))) {
+                        vidaBoss -= 5;
+                        System.out.println("Sua resposta ecoa com perfeição! O Guardião hesita, perdendo fragmentos de código decimal!");
+                        System.out.println("Vida do Guardião FLOAT: " + vidaBoss);
+                    } else {
+                        dano = random.nextInt(5) + 3;
+                        vida -= dano;
+                        System.out.println("O Guardião gira seus braços líquidos e lança uma onda decimal!");
+                        System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
+                        System.out.println("Date: \"Errou! FLOAT representa números com ponto decimal, cuidado com a precisão!\"");
+                    }
+                }
+
+                if (vidaBoss <= 0) {
+                    System.out.println();
+                    System.out.println("Guardião FLOAT: \"O erro... foi corrigido...\"");
+                    System.out.println("O corpo dele se dissolve em mil partículas de luz dourada, restaurando a calma do vale.");
+                    System.out.println("Date: \"Você conseguiu, " + nome + "! Outro Guardião foi liberto.\"");
+                }
+
+            }
+        }
+
+
     }
 
 
