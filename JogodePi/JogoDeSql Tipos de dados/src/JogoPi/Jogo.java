@@ -453,6 +453,7 @@ public class Jogo{
             System.out.println("O corpo dele se desfaz em fragmentos de dados, deixando um portal brilhante atrás de si.");
             System.out.println("Date: \"Você conseguiu, " + nome + "! O primeiro Guardião foi purificado.\"");
             System.out.println("Date: Com isso, você conseguiu o fragmento dos inteiros");
+            System.out.println("Você obteve o FRAGMENTO DOS INTEIROS! ");
             scanner.nextLine();
             System.out.println("Junte o fragmento de todos os guardiões, para enfrentar o desafio final");
             pedacos++;
@@ -501,6 +502,11 @@ public class Jogo{
                     case 3:
                         Date();
                         break;
+
+                    case 4:
+                        if(pedacos ==4){
+
+                        }
                 }
 
                 // remover o andar que terminou
@@ -698,7 +704,7 @@ public class Jogo{
                     System.out.println("O corpo dele se dissolve em mil partículas de luz dourada, restaurando a calma do vale.");
                     System.out.println("Date: \"Você conseguiu, " + nome + "! Outro Guardião foi liberto.\"");
                     scanner.nextLine();
-                    System.out.println("Parabens, voce conseguiu mais um fragmento");
+                    System.out.println("Você obteve o FRAGMENTO DOS DECIMAIS");
                     pedacos++;
                     System.out.println("Voce tem" + pedacos + " fragmentos");
                 }
@@ -884,7 +890,7 @@ public class Jogo{
                     System.out.println("Ele se desfaz em uma chuva de frases brilhantes.");
                     System.out.println("Date: \"Você conseguiu, " + nome + "! O Vale das Strings está restaurado.\"");
                     scanner.nextLine();
-                    System.out.println("Parabens, voce conseguiu mais um fragmento");
+                    System.out.println("Você obteve o FRAGMENTO DAS PALAVRAS! ");
                     pedacos++;
                     System.out.println("Voce tem" + pedacos + " fragmentos");
                 }
@@ -895,171 +901,191 @@ public class Jogo{
     class JogoDate {
         public static void jogarDate(String nome, int vidaAtual, int pedacos) {
 
-            Scanner scanner = new Scanner(System.in);
-            Random random = new Random();
 
-            int vida = vidaAtual;
-            int dano;
+                        Scanner scanner = new Scanner(System.in);
+                        Random random = new Random();
 
-            System.out.println("\n");
-            System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-            System.out.println(">>> NOVO ANDAR DESBLOQUEADO: O SALÃO DAS ERAS <<<");
-            System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-            System.out.println();
-            System.out.println("Date (parte boa): \"Chegamos... meu domínio original. O Salão das Eras.\"");
-            System.out.println("Date: \"Aqui o tempo era ordenado, harmonioso... até o feitiço Corruptom me dividir.\"");
-            scanner.nextLine();
+                        int vida = vidaAtual;
+                        int dano;
 
-            System.out.println("Você observa grandes anéis de relógios flutuantes,");
-            System.out.println("ampulhetas gigantes derramando areia para cima e engrenagens que giram contra o tempo.");
-            scanner.nextLine();
+                        System.out.println("\n");
+                        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+                        System.out.println(">>> NOVO ANDAR DESBLOQUEADO: O SALÃO DAS ERAS <<<");
+                        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+                        System.out.println();
+                        System.out.println("Date: \"Este é o meu domínio original… o Salão das Eras.\"");
+                        System.out.println("Date: \"Aqui, o tempo corre, congela, retrocede… tudo coexistindo.\"");
+                        scanner.nextLine();
 
-            System.out.println("Date: \"Parte de mim resistiu ao feitiço... mas a outra parte...\"");
-            System.out.println("Date: \"Ela sucumbiu ao caos do tempo quebrado. E agora, controla a maior sala deste salão.\"");
-            scanner.nextLine();
+                        System.out.println("Relógios flutuam no ar, ampulhetas derramam areia para cima.");
+                        System.out.println("Círculos de tempo se expandem e contraem como pulmões vivos.");
+                        scanner.nextLine();
 
-            // Perguntas menores do andar
-            ArrayList<String> perguntas = new ArrayList<>();
-            ArrayList<String> respostas = new ArrayList<>();
+                        System.out.println("Date: \"Quando fui dividida pelo feitiço Corruptom, o fluxo temporal foi quebrado.\"");
+                        System.out.println("Date: \"Minha outra metade… controla a parte corrompida deste salão.\"");
+                        scanner.nextLine();
 
-            perguntas.add("O tipo DATE é usado para armazenar qual tipo de informação?");
-            respostas.add("data");
+                        // PERGUNTAS iniciais (criaturas menores)
+                        ArrayList<String> perguntas = new ArrayList<>();
+                        ArrayList<String> respostas = new ArrayList<>();
 
-            perguntas.add("Um campo DATE pode representar qual conjunto?");
-            respostas.add("dia mes ano");
+                        perguntas.add("O tipo DATE armazena que tipo de dado?");
+                        respostas.add("data");
 
-            perguntas.add("Qual vantagem de usar DATE em sistemas?");
-            respostas.add("ordenar eventos");
+                        perguntas.add("Um campo DATE geralmente contém quais informações?");
+                        respostas.add("dia mes ano");
 
-            System.out.println();
-            System.out.println("Pequenos fragmentos temporais começam a ganhar forma na sua frente.");
-            System.out.println("Eles se torcem como se estivessem presos em loops infinitos.");
-            System.out.println("Date: \"São Ecos de Tempo — pedaços corrompidos do meu próprio domínio.\"");
-            scanner.nextLine();
+                        perguntas.add("Para registrar aniversários, qual tipo é ideal?");
+                        respostas.add("date");
 
-            String respostaJogador;
-            int ecos = 2;
-            int indice;
+                        perguntas.add("Dates ajudam na ordenação de que?");
+                        respostas.add("eventos");
 
-            while (ecos > 0 && vida > 0) {
+                        perguntas.add("DATE pode representar datas futuras e passadas?");
+                        respostas.add("sim");
 
-                indice = random.nextInt(perguntas.size());
+                        perguntas.add("DATE armazena apenas datas ou data e hora?");
+                        respostas.add("data");
 
-                System.out.println("\nUm Eco de Tempo sussurra com vozes de várias épocas:");
-                System.out.println(perguntas.get(indice));
-                System.out.print("Sua resposta: ");
-                respostaJogador = scanner.nextLine().toLowerCase().trim();
+                        System.out.println();
+                        System.out.println("Rachaduras temporais começam a se abrir no chão.");
+                        System.out.println("Delas emergem Criaturas Temporais instáveis — os \"Ecos do Tempo\".");
+                        scanner.nextLine();
 
-                if (respostaJogador.contains(respostas.get(indice))) {
-                    System.out.println("O Eco se desfaz como poeira de relógio. Você superou a distorção temporal!");
-                    ecos--;
-                } else {
-                    dano = random.nextInt(3) + 2;
-                    vida -= dano;
-                    System.out.println("O Eco se rompe e explode em estilhaços de tempo!");
-                    System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
-                    System.out.println("Date: \"Concentre-se! DATE envolve datas completas, não confunda!\"");
+                        int ecos = 2;
+                        int indice = random.nextInt(perguntas.size());
+                        String respostaJogador;
+
+                        while (ecos > 0 && vida > 0) {
+
+                            System.out.println();
+                            System.out.println("Um Eco do Tempo distorcido murmura:");
+                            System.out.println(perguntas.get(indice));
+                            System.out.print("Sua resposta: ");
+                            respostaJogador = scanner.nextLine().toLowerCase().trim();
+
+                            if (respostaJogador.equalsIgnoreCase(respostas.get(indice))) {
+                                System.out.println("O Eco se desfaz em poeira temporal.");
+                                ecos--;
+                                System.out.println("Date: \"Muito bem, " + nome + ". Você entende o fluxo do tempo.\"");
+                            } else {
+                                dano = random.nextInt(3) + 2;
+                                vida -= dano;
+                                System.out.println("O Eco explode em fragmentos temporais!");
+                                System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
+                                System.out.println("Date: \"Concentre-se! DATE lida com dias completos!\"");
+                            }
+
+                            indice = random.nextInt(perguntas.size());
+                        }
+
+                        if (vida <= 0) {
+                            System.out.println("O tempo te engole. Sua jornada termina aqui.");
+                            return;
+                        }
+
+                        System.out.println();
+                        System.out.println("Ao derrotar os Ecos, uma aura azulada se espalha.");
+                        System.out.println("De dentro dela… surge uma figura idêntica à Date, porém distorcida.");
+                        scanner.nextLine();
+
+                        System.out.println("É a \"Date Corrompida\" — a metade temporal perdida.");
+                        boolean sombra = false;
+
+                        do {
+                            System.out.println("Date Corrompida: \"O tempo… pertence… a mim… Responda!\"");
+                            System.out.println(perguntas.get(indice));
+                            System.out.print("Sua resposta: ");
+                            respostaJogador = scanner.nextLine().toLowerCase().trim();
+
+                            if (respostaJogador.equalsIgnoreCase(respostas.get(indice))) {
+                                System.out.println("A Date Corrompida se desfaz em estilhaços de relógios quebrados.");
+                                System.out.println("Date: \"Essa era a minha parte enfraquecida. Mas o guardião verdadeiro nos espera.\"");
+                                sombra = true;
+                            } else {
+                                dano = random.nextInt(3) + 2;
+                                vida -= dano;
+                                System.out.println("Ela manipula o tempo e te atinge antes mesmo de atacar!");
+                                System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
+                            }
+
+                            indice = random.nextInt(perguntas.size());
+                        } while (!sombra && vida > 0);
+
+                        if (vida <= 0) {
+                            System.out.println("Você é consumido por um colapso temporal… fim da aventura.");
+                            return;
+                        }
+
+                        System.out.println();
+                        System.out.println("O salão inteiro treme. As engrenagens param.");
+                        System.out.println("Surge o Guardião DATE — uma entidade gigante feita de areia invertida.");
+                        scanner.nextLine();
+
+                        int vidaBoss = 20;
+
+                        ArrayList<String> perguntasBoss = new ArrayList<>();
+                        ArrayList<String> respostasBoss = new ArrayList<>();
+
+                        perguntasBoss.add("O tipo DATE representa o que?");
+                        respostasBoss.add("data");
+
+                        perguntasBoss.add("Formato comum de DATE (ex: 2024-10-30):");
+                        respostasBoss.add("yyyy mm dd");
+
+                        perguntasBoss.add("Para registrar eventos, qual tipo é usado?");
+                        respostasBoss.add("date");
+
+                        perguntasBoss.add("Datas ajudam a organizar o quê?");
+                        respostasBoss.add("eventos");
+
+                        for (int i = 0; i < perguntasBoss.size() && vidaBoss > 0 && vida > 0; i++) {
+
+                            System.out.println();
+                            System.out.println("Vida do Guardião DATE: " + vidaBoss);
+                            System.out.println("Guardião DATE: \"" + perguntasBoss.get(i) + "\"");
+                            System.out.print("Sua resposta: ");
+
+                            String resposta = scanner.nextLine().toLowerCase().trim();
+
+                            if (resposta.equalsIgnoreCase(respostasBoss.get(i))) {
+                                vidaBoss -= 5;
+                                System.out.println("A areia do Guardião se desestabiliza! Bom ataque!");
+                                System.out.println("Vida do Guardião DATE: " + vidaBoss);
+                            } else {
+                                dano = random.nextInt(5) + 3;
+                                vida -= dano;
+                                System.out.println("O Guardião retrocede o tempo e te atinge!");
+                                System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
+                            }
+                        }
+
+                        if (vidaBoss <= 0) {
+                            System.out.println();
+                            System.out.println("Guardião DATE: \"O… fluxo… temporal… foi restaurado…\"");
+                            System.out.println("Date: \"Obrigada, " + nome + ". Meu domínio está salvo.\"");
+                            System.out.println(" Você obteve o FRAGMENTO DO TEMPO! ");
+                            pedacos++;
+                            System.out.println("Agora você tem " + pedacos + " fragmentos!");
+                        } else {
+                            System.out.println("Você é engolido por uma tempestade temporal… fim da jornada.");
+                        }
+                    }
                 }
             }
 
-            if (vida <= 0) {
-                System.out.println("\nVocê é consumido por uma fenda temporal...");
-                System.out.println("Sua jornada termina aqui.");
-                return;
+            public static void ChefeFinal(){
+        class JogarChefe{
+            public static void ChefeFinal(int vidaAtual,String nome){
+                System.out.println("");
+
             }
 
-            System.out.println("\nApós derrotar os Ecos, uma fenda azulada se abre no centro do salão.");
-            System.out.println("Dela emerge uma figura igual à Date — mas com olhos rachados como vidros antigos.");
-            scanner.nextLine();
+        }
 
-            System.out.println("Date (parte boa): \"Essa é… minha outra metade. A Sombra Cronável.\"");
-            System.out.println("A criatura abre um sorriso distorcido, como se várias versões dela estivessem falando ao mesmo tempo.");
-            scanner.nextLine();
-
-            boolean sombraDerrotada = false;
-
-            do {
-                indice = random.nextInt(perguntas.size());
-
-                System.out.println("\nSombra Cronável: \"O tempo… é meu. Tudo pertence a mim. Responda, mortal!\"");
-                System.out.println(perguntas.get(indice));
-                System.out.print("Sua resposta: ");
-                respostaJogador = scanner.nextLine().toLowerCase().trim();
-
-                if (respostaJogador.contains(respostas.get(indice))) {
-                    System.out.println("A Sombra Cronável se desfaz em estilhaços de relógios!");
-                    System.out.println("Date: \"Muito bem... aquela era a corrupção mais superficial. Mas agora...\"");
-                    sombraDerrotada = true;
-                } else {
-                    dano = random.nextInt(3) + 2;
-                    vida -= dano;
-                    System.out.println("A Sombra Cronável altera sua linha temporal e ataca!");
-                    System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
-                    System.out.println("Sombra Cronável: \"O tempo te devorará!\"");
-                }
-            } while (!sombraDerrotada && vida > 0);
-
-            if (vida <= 0) {
-                System.out.println("\nA Sombra Cronável consome sua existência...");
-                System.out.println("Fim do jogo.");
-                return;
-            }
-
-            System.out.println("\nA Sombra se desfaz, e o salão inteiro treme.");
-            System.out.println("Date: \"É aqui que ela está… o meu núcleo corrompido. O verdadeiro Guardião deste andar.\"");
-            scanner.nextLine();
-
-            // BOSS — Guardião DATE
-            System.out.println("Um gigante formado de areia invertida e engrenagens surge.");
-            System.out.println("Seus olhos giram como ponteiros enlouquecidos.");
-            System.out.println("Guardião DATE: \"O TEMPO NÃO OBEDECE MAIS A VOCÊS!\"");
-            scanner.nextLine();
-
-            int vidaBoss = 20;
-
-            ArrayList<String> perguntasBoss = new ArrayList<>();
-            ArrayList<String> respostasBoss = new ArrayList<>();
-
-            perguntasBoss.add("O que um campo DATE representa normalmente?");
-            respostasBoss.add("data completa");
-
-            perguntasBoss.add("Qual formato é frequentemente usado em DATE? (ex: 2024-01-05)");
-            respostasBoss.add("yyyy mm dd");
-
-            perguntasBoss.add("Por que datas são importantes em sistemas?");
-            respostasBoss.add("organizar eventos");
-
-            perguntasBoss.add("DATE armazena que tipo de informação?");
-            respostasBoss.add("data");
-
-            for (int i = 0; i < perguntasBoss.size() && vidaBoss > 0 && vida > 0; i++) {
-
-                System.out.println("\nVida do Guardião DATE: " + vidaBoss);
-                System.out.println("Guardião DATE: \"" + perguntasBoss.get(i) + "\"");
-                System.out.print("Sua resposta: ");
-                String resp = scanner.nextLine().toLowerCase().trim();
-
-                if (resp.contains(respostasBoss.get(i))) {
-                    vidaBoss -= 5;
-                    System.out.println("A areia do Guardião racha! Você afetou sua linha temporal!");
-                } else {
-                    dano = random.nextInt(5) + 3;
-                    vida -= dano;
-                    System.out.println("O Guardião retrocede no tempo e atinge você antes do ataque!");
-                    System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
-                }
-            }
-            if (vidaBoss <= 0) {
-                System.out.println("\nGuardião DATE: \"O… tempo… retorna… ao fluxo… correto…\"");
-                System.out.println("O gigante se desfaz em um turbilhão dourado.");
-                System.out.println("Date: \"Obrigada, " + nome + "... agora sou completa novamente.\"");
-                System.out.println("✨ Você obteve o FRAGMENTO DO TEMPO! ✨");
-            } else {
-                System.out.println("\nVocê cai, perdido entre eras...");
-                System.out.println("Fim da jornada.");
             }
 
             }
-       }
-    }
-}
+
+
+
