@@ -841,6 +841,53 @@ public class Jogo{
     System.out.println("Guardião VARCHAR: \"Humano… veio tentar restaurar o sentido deste vale?\"");
     System.out.println("Guardião VARCHAR: \"Mostre que domina as palavras, limites e tamanhos variáveis.\"");
     scanner.nextLine();
+            // BOSS
+    int vidaBoss = 20;
+
+    ArrayList<String> perguntasBoss = new ArrayList<>();
+    ArrayList<String> respostasBoss = new ArrayList<>();
+
+    perguntasBoss.add("Que tipo de dado é ideal para armazenar nomes e textos curtos?");
+    respostasBoss.add("varchar");
+
+    perguntasBoss.add("VARCHAR armazena texto com tamanho fixo ou variável?");
+    respostasBoss.add("variavel");
+
+    perguntasBoss.add("VARCHAR é mais eficiente que CHAR quando os textos têm tamanhos diferentes?");
+    respostasBoss.add("sim");
+
+    perguntasBoss.add("Ao criar uma coluna VARCHAR, é necessário definir um tamanho máximo?");
+    respostasBoss.add("sim");
+
+    for (int i = 0; i < perguntasBoss.size() && vidaBoss > 0 && vida > 0; i++) {
+
+        System.out.println();
+        System.out.println("Vida do Guardião VARCHAR: " + vidaBoss);
+        System.out.println("Guardião VARCHAR: \"" + perguntasBoss.get(i) + "\"");
+        System.out.print("Sua resposta: ");
+        String resposta = scanner.nextLine().toLowerCase().trim();
+
+        if (resposta.equalsIgnoreCase(respostasBoss.get(i))) {
+            vidaBoss -= 5;
+            System.out.println("As palavras ao redor tremem — você atingiu o Guardião com precisão!");
+            System.out.println("Vida do Guardião VARCHAR: " + vidaBoss);
+        } else {
+            dano = random.nextInt(5) + 3;
+            vida -= dano;
+            System.out.println("O Guardião dispara uma enxurrada de caracteres instáveis!");
+            System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
+            System.out.println("Date: \"Errou! Lembre-se da natureza variável do VARCHAR!\"");
+        }
+    }
+
+    if (vidaBoss <= 0) {
+        System.out.println();
+        System.out.println("Guardião VARCHAR: \"Minhas palavras… finalmente… fazem sentido novamente…\"");
+        System.out.println("Ele se desfaz em uma chuva de frases brilhantes.");
+        System.out.println("Date: \"Você conseguiu, " + nome + "! O Vale das Strings está restaurado.\"");
+    }
+
+}
     }
 
     public static void Date(){
