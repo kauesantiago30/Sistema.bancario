@@ -905,4 +905,40 @@ public class Jogo{
         System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
         System.out.println(">>> NOVO ANDAR DESBLOQUEADO: O SALÃO DAS ERAS <<<");
         System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+
+        System.out.println();
+        System.out.println("Date (parte boa): \"Chegamos... meu domínio original. O Salão das Eras.\"");
+        System.out.println("Date: \"Aqui o tempo era ordenado, harmonioso... até o feitiço Corruptom me dividir.\"");
+        scanner.nextLine();
+
+        System.out.println("Você observa grandes anéis de relógios flutuantes,");
+        System.out.println("ampulhetas gigantes derramando areia para cima e engrenagens que giram contra o tempo.");
+        scanner.nextLine();
+
+        System.out.println("Date: \"Parte de mim resistiu ao feitiço... mas a outra parte...\"");
+        System.out.println("Date: \"Ela sucumbiu ao caos do tempo quebrado. E agora, controla a maior sala deste salão.\"");
+        scanner.nextLine();
+
+        // Perguntas menores do andar
+        ArrayList<String> perguntas = new ArrayList<>();
+        ArrayList<String> respostas = new ArrayList<>();
+
+        perguntas.add("O tipo DATE é usado para armazenar qual tipo de informação?");
+        respostas.add("data");
+
+        perguntas.add("Um campo DATE pode representar qual conjunto?");
+        respostas.add("dia mes ano");
+
+        perguntas.add("Qual vantagem de usar DATE em sistemas?");
+        respostas.add("ordenar eventos");
+
+        System.out.println();
+        System.out.println("Pequenos fragmentos temporais começam a ganhar forma na sua frente.");
+        System.out.println("Eles se torcem como se estivessem presos em loops infinitos.");
+        System.out.println("Date: \"São Ecos de Tempo — pedaços corrompidos do meu próprio domínio.\"");
+        scanner.nextLine();
+
+        String respostaJogador;
+        int ecos = 2;
+        int indice;
 }
