@@ -711,6 +711,56 @@ public class Jogo{
 
     public static void Varchar(){
         System.out.println("3");
+
+        public static void jogarVarchar(String nome, int vidaAtual) {
+
+    Scanner scanner = new Scanner(System.in);
+    Random random = new Random();
+
+    int vida = vidaAtual;
+    int dano;
+
+    System.out.println("\n");
+    System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+    System.out.println(">>> NOVO ANDAR DESBLOQUEADO: O VALE DAS STRINGS <<<");
+    System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+    System.out.println();
+    System.out.println("Date: \"Chegamos ao Vale das Strings… domínio do Guardião VARCHAR.\"");
+    System.out.println("Date: \"Aqui, palavras, nomes e símbolos se entrelaçam como se fossem teias vivas.\"");
+    scanner.nextLine();
+            System.out.println("Letras flutuam no ar como borboletas luminosas.");
+    System.out.println("Paredes inteiras são formadas por frases que mudam constantemente.");
+    scanner.nextLine();
+
+    System.out.println("Date: \"O Guardião VARCHAR manipulava o tamanho das palavras, mas foi corrompido pela fragmentação.\"");
+    System.out.println("Date: \"Agora, este vale está dividido entre frases incompletas e textos sem sentido.\"");
+    scanner.nextLine();
+
+    // PERGUNTAS DO PRIMEIRO ESTÁGIO
+    ArrayList<String> perguntas = new ArrayList<>();
+    ArrayList<String> respostas = new ArrayList<>();
+
+    perguntas.add("O tipo VARCHAR é usado para armazenar que tipo de dado?");
+    respostas.add("texto");
+
+    perguntas.add("VARCHAR permite armazenar palavras e frases?");
+    respostas.add("sim");
+
+    perguntas.add("Qual é a diferença principal entre CHAR e VARCHAR?");
+    respostas.add("varchar armazena tamanho variavel");
+             perguntas.add("Se você quer armazenar um nome de pessoa, qual tipo deve usar?");
+    respostas.add("varchar");
+
+    perguntas.add("VARCHAR desperdiça espaço quando o texto é pequeno?");
+    respostas.add("nao");
+
+    perguntas.add("VARCHAR precisa de um limite máximo definido?");
+    respostas.add("sim");
+
+    System.out.println();
+    System.out.println("Enquanto você segue pelo vale, letras começam a se juntar no ar…");
+    System.out.println("Elas se moldam em criaturas instáveis, feitas de palavras incompletas.");
+    System.out.println("Date: \"Cuidado… são os Fragmentos de Texto!\"");
     }
 
     public static void Date(){
