@@ -761,6 +761,86 @@ public class Jogo{
     System.out.println("Enquanto você segue pelo vale, letras começam a se juntar no ar…");
     System.out.println("Elas se moldam em criaturas instáveis, feitas de palavras incompletas.");
     System.out.println("Date: \"Cuidado… são os Fragmentos de Texto!\"");
+            scanner.nextLine();
+
+    int fragmentos = 2;
+    int indice = random.nextInt(perguntas.size());
+    String respostaJogador;
+
+    while (fragmentos > 0 && vida > 0) {
+
+        System.out.println();
+        System.out.println("Um Fragmento de Texto surge diante de você e pergunta:");
+        System.out.println(perguntas.get(indice));
+        System.out.print("Sua resposta: ");
+        respostaJogador = scanner.nextLine().toLowerCase().trim();
+
+        if (respostaJogador.equalsIgnoreCase(respostas.get(indice))) {
+            System.out.println("O Fragmento se desfaz em letras brilhantes que se espalham pelo ar.");
+            fragmentos--;
+            System.out.println("Date: \"Muito bem, " + nome + ". Você entende a fluidez das palavras.\"");
+        } else {
+            dano = random.nextInt(3) + 2;
+            vida -= dano;
+            System.out.println("O Fragmento distorce as letras ao redor e lança uma frase caótica!");
+            System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
+            System.out.println("Date: \"Errou… lembre-se da função do VARCHAR!\"");
+        }
+
+    }
+             if (vida <= 0) {
+        System.out.println("Suas palavras se embaralham… o Vale das Strings o engole lentamente.");
+        System.out.println("Sua jornada termina aqui.");
+        return;
+    }
+
+    System.out.println();
+    System.out.println("Após derrotar os fragmentos, uma ponte feita de frases brilhantes aparece.");
+    scanner.nextLine();
+
+    System.out.println("No meio dela, uma forma humanoide feita de texto puro começa a se erguer.");
+    System.out.println("Cada movimento distorce e reescreve as palavras ao seu redor.");
+    scanner.nextLine();
+
+    System.out.println("É o “Verbatim, o Fragmentado” — um monstro criado de trechos de textos quebrados.");
+    boolean Verbatim = false;
+            do {
+
+        System.out.println("Verbatim: \"Complete-me… ou sofra a dor das palavras incompletas!\"");
+        System.out.println(perguntas.get(indice));
+        System.out.print("Sua resposta: ");
+        respostaJogador = scanner.nextLine().toLowerCase().trim();
+
+        if (respostaJogador.equalsIgnoreCase(respostas.get(indice))) {
+            System.out.println("Verbatim se desfaz em milhares de letras, libertando sua essência.");
+            System.out.println("No ar, uma palavra dourada começa a brilhar intensamente.");
+            System.out.println("✨ Você obteve o Fragmento da Linguagem!");
+            Verbatim = true;
+        } else {
+            dano = random.nextInt(3) + 2;
+            vida -= dano;
+            System.out.println("As palavras de Verbatim explodem em sua direção!");
+            System.out.println("Sua vida agora é: " + vida);
+            System.out.println("Verbatim repete a pergunta…");
+        }
+                } while (!Verbatim);
+
+
+    scanner.nextLine();
+    System.out.println("O fragmento recém-obtido reage com o ambiente.");
+    System.out.println("Frases se alinham, formando um portal brilhante à sua frente.");
+    scanner.nextLine();
+
+    System.out.println("Ao atravessá-lo, você chega a uma sala gigantesca feita inteiramente de texto flutuante.");
+    scanner.nextLine();
+
+    System.out.println("No centro, sentado em um trono de livros reescritos… está o Guardião VARCHAR.");
+    System.out.println("Seu corpo é feito de palavras vivas, que mudam a cada segundo.");
+    scanner.nextLine();
+
+    System.out.println("Guardião VARCHAR: \"Humano… veio tentar restaurar o sentido deste vale?\"");
+    System.out.println("Guardião VARCHAR: \"Mostre que domina as palavras, limites e tamanhos variáveis.\"");
+    scanner.nextLine();
     }
 
     public static void Date(){
