@@ -2,14 +2,12 @@
 package JogoPi;
 import java.util.*;
 
-public class Jogo{
-
-
+public class Jogo {
 
 
     public static void jogar() {
 
-        int pedacos =0;
+        int pedacos = 0;
         int vida = 15;
         int dano;
 
@@ -148,7 +146,7 @@ public class Jogo{
         System.out.println("");
         System.out.println("");
 
-        while(vida > 0){
+        while (vida > 0) {
 
             System.out.println(">>> MISSÃO 1 INICIADA: O ECO DE INT <<<");
             System.out.println("Local: Caverna Binária — O domínio corrompido do Guardião dos Números.");
@@ -492,7 +490,7 @@ public class Jogo{
                 // --- SWITCH CASE REAL ---
                 switch (escolha) {
                     case 1:
-                         Float();
+                        Float();
                         break;
 
                     case 2:
@@ -510,7 +508,8 @@ public class Jogo{
 
         }
     }
-    public static void Float(){
+
+    public static void Float() {
 
         class JogoFloat {
 
@@ -620,20 +619,20 @@ public class Jogo{
                     respostaJogador = scanner.nextLine().toLowerCase().trim();
 
                     if (respostaJogador.equalsIgnoreCase(respostas.get(indice))) {
-                      System.out.println("Com o corpo tremendo e a respiração ofegante, o jogador observa as últimas gotas de Flutuaris desaparecerem nas águas.");
+                        System.out.println("Com o corpo tremendo e a respiração ofegante, o jogador observa as últimas gotas de Flutuaris desaparecerem nas águas.");
                         System.out.println("Em meio ao silêncio, algo começa a brilhar no fundo do lago — um pequeno cristal azul pulsante.");
                         System.out.println("Você o segura e sente uma leve vibração percorrer seus dedos.");
                         System.out.println("\uD83D\uDCDC Você obteve o Fragmento da Precisão!");
 
                         Fluturis = true;
-                    }else{
+                    } else {
                         dano = random.nextInt(3) + 2;
                         vida -= dano;
                         System.out.println("Erro de arredondamento! Prepare-se para sentir o caos dos decimais!");
                         System.out.println("Sua vida agora é: " + vida);
                         System.out.println("Fluturis repete a pergunta");
                     }
-                }while(!Fluturis);
+                } while (!Fluturis);
 
 
                 scanner.nextLine();
@@ -709,190 +708,191 @@ public class Jogo{
 
     }
 
-    public static void Varchar(){
+    public static void Varchar() {
         System.out.println("3");
 
-        public static void jogarVarchar(String nome, int vidaAtual) {
+        public static void jogarVarchar (String nome,int vidaAtual){
 
-    Scanner scanner = new Scanner(System.in);
-    Random random = new Random();
+            Scanner scanner = new Scanner(System.in);
+            Random random = new Random();
 
-    int vida = vidaAtual;
-    int dano;
+            int vida = vidaAtual;
+            int dano;
 
-    System.out.println("\n");
-    System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-    System.out.println(">>> NOVO ANDAR DESBLOQUEADO: O VALE DAS STRINGS <<<");
-    System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-    System.out.println();
-    System.out.println("Date: \"Chegamos ao Vale das Strings… domínio do Guardião VARCHAR.\"");
-    System.out.println("Date: \"Aqui, palavras, nomes e símbolos se entrelaçam como se fossem teias vivas.\"");
-    scanner.nextLine();
+            System.out.println("\n");
+            System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+            System.out.println(">>> NOVO ANDAR DESBLOQUEADO: O VALE DAS STRINGS <<<");
+            System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+            System.out.println();
+            System.out.println("Date: \"Chegamos ao Vale das Strings… domínio do Guardião VARCHAR.\"");
+            System.out.println("Date: \"Aqui, palavras, nomes e símbolos se entrelaçam como se fossem teias vivas.\"");
+            scanner.nextLine();
             System.out.println("Letras flutuam no ar como borboletas luminosas.");
-    System.out.println("Paredes inteiras são formadas por frases que mudam constantemente.");
-    scanner.nextLine();
-
-    System.out.println("Date: \"O Guardião VARCHAR manipulava o tamanho das palavras, mas foi corrompido pela fragmentação.\"");
-    System.out.println("Date: \"Agora, este vale está dividido entre frases incompletas e textos sem sentido.\"");
-    scanner.nextLine();
-
-    // PERGUNTAS DO PRIMEIRO ESTÁGIO
-    ArrayList<String> perguntas = new ArrayList<>();
-    ArrayList<String> respostas = new ArrayList<>();
-
-    perguntas.add("O tipo VARCHAR é usado para armazenar que tipo de dado?");
-    respostas.add("texto");
-
-    perguntas.add("VARCHAR permite armazenar palavras e frases?");
-    respostas.add("sim");
-
-    perguntas.add("Qual é a diferença principal entre CHAR e VARCHAR?");
-    respostas.add("varchar armazena tamanho variavel");
-             perguntas.add("Se você quer armazenar um nome de pessoa, qual tipo deve usar?");
-    respostas.add("varchar");
-
-    perguntas.add("VARCHAR desperdiça espaço quando o texto é pequeno?");
-    respostas.add("nao");
-
-    perguntas.add("VARCHAR precisa de um limite máximo definido?");
-    respostas.add("sim");
-
-    System.out.println();
-    System.out.println("Enquanto você segue pelo vale, letras começam a se juntar no ar…");
-    System.out.println("Elas se moldam em criaturas instáveis, feitas de palavras incompletas.");
-    System.out.println("Date: \"Cuidado… são os Fragmentos de Texto!\"");
+            System.out.println("Paredes inteiras são formadas por frases que mudam constantemente.");
             scanner.nextLine();
 
-    int fragmentos = 2;
-    int indice = random.nextInt(perguntas.size());
-    String respostaJogador;
+            System.out.println("Date: \"O Guardião VARCHAR manipulava o tamanho das palavras, mas foi corrompido pela fragmentação.\"");
+            System.out.println("Date: \"Agora, este vale está dividido entre frases incompletas e textos sem sentido.\"");
+            scanner.nextLine();
 
-    while (fragmentos > 0 && vida > 0) {
+            // PERGUNTAS DO PRIMEIRO ESTÁGIO
+            ArrayList<String> perguntas = new ArrayList<>();
+            ArrayList<String> respostas = new ArrayList<>();
 
-        System.out.println();
-        System.out.println("Um Fragmento de Texto surge diante de você e pergunta:");
-        System.out.println(perguntas.get(indice));
-        System.out.print("Sua resposta: ");
-        respostaJogador = scanner.nextLine().toLowerCase().trim();
+            perguntas.add("O tipo VARCHAR é usado para armazenar que tipo de dado?");
+            respostas.add("texto");
 
-        if (respostaJogador.equalsIgnoreCase(respostas.get(indice))) {
-            System.out.println("O Fragmento se desfaz em letras brilhantes que se espalham pelo ar.");
-            fragmentos--;
-            System.out.println("Date: \"Muito bem, " + nome + ". Você entende a fluidez das palavras.\"");
-        } else {
-            dano = random.nextInt(3) + 2;
-            vida -= dano;
-            System.out.println("O Fragmento distorce as letras ao redor e lança uma frase caótica!");
-            System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
-            System.out.println("Date: \"Errou… lembre-se da função do VARCHAR!\"");
-        }
+            perguntas.add("VARCHAR permite armazenar palavras e frases?");
+            respostas.add("sim");
 
-    }
-             if (vida <= 0) {
-        System.out.println("Suas palavras se embaralham… o Vale das Strings o engole lentamente.");
-        System.out.println("Sua jornada termina aqui.");
-        return;
-    }
+            perguntas.add("Qual é a diferença principal entre CHAR e VARCHAR?");
+            respostas.add("varchar armazena tamanho variavel");
+            perguntas.add("Se você quer armazenar um nome de pessoa, qual tipo deve usar?");
+            respostas.add("varchar");
 
-    System.out.println();
-    System.out.println("Após derrotar os fragmentos, uma ponte feita de frases brilhantes aparece.");
-    scanner.nextLine();
+            perguntas.add("VARCHAR desperdiça espaço quando o texto é pequeno?");
+            respostas.add("nao");
 
-    System.out.println("No meio dela, uma forma humanoide feita de texto puro começa a se erguer.");
-    System.out.println("Cada movimento distorce e reescreve as palavras ao seu redor.");
-    scanner.nextLine();
+            perguntas.add("VARCHAR precisa de um limite máximo definido?");
+            respostas.add("sim");
 
-    System.out.println("É o “Verbatim, o Fragmentado” — um monstro criado de trechos de textos quebrados.");
-    boolean Verbatim = false;
+            System.out.println();
+            System.out.println("Enquanto você segue pelo vale, letras começam a se juntar no ar…");
+            System.out.println("Elas se moldam em criaturas instáveis, feitas de palavras incompletas.");
+            System.out.println("Date: \"Cuidado… são os Fragmentos de Texto!\"");
+            scanner.nextLine();
+
+            int fragmentos = 2;
+            int indice = random.nextInt(perguntas.size());
+            String respostaJogador;
+
+            while (fragmentos > 0 && vida > 0) {
+
+                System.out.println();
+                System.out.println("Um Fragmento de Texto surge diante de você e pergunta:");
+                System.out.println(perguntas.get(indice));
+                System.out.print("Sua resposta: ");
+                respostaJogador = scanner.nextLine().toLowerCase().trim();
+
+                if (respostaJogador.equalsIgnoreCase(respostas.get(indice))) {
+                    System.out.println("O Fragmento se desfaz em letras brilhantes que se espalham pelo ar.");
+                    fragmentos--;
+                    System.out.println("Date: \"Muito bem, " + nome + ". Você entende a fluidez das palavras.\"");
+                } else {
+                    dano = random.nextInt(3) + 2;
+                    vida -= dano;
+                    System.out.println("O Fragmento distorce as letras ao redor e lança uma frase caótica!");
+                    System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
+                    System.out.println("Date: \"Errou… lembre-se da função do VARCHAR!\"");
+                }
+
+            }
+            if (vida <= 0) {
+                System.out.println("Suas palavras se embaralham… o Vale das Strings o engole lentamente.");
+                System.out.println("Sua jornada termina aqui.");
+                return;
+            }
+
+            System.out.println();
+            System.out.println("Após derrotar os fragmentos, uma ponte feita de frases brilhantes aparece.");
+            scanner.nextLine();
+
+            System.out.println("No meio dela, uma forma humanoide feita de texto puro começa a se erguer.");
+            System.out.println("Cada movimento distorce e reescreve as palavras ao seu redor.");
+            scanner.nextLine();
+
+            System.out.println("É o “Verbatim, o Fragmentado” — um monstro criado de trechos de textos quebrados.");
+            boolean Verbatim = false;
             do {
 
-        System.out.println("Verbatim: \"Complete-me… ou sofra a dor das palavras incompletas!\"");
-        System.out.println(perguntas.get(indice));
-        System.out.print("Sua resposta: ");
-        respostaJogador = scanner.nextLine().toLowerCase().trim();
+                System.out.println("Verbatim: \"Complete-me… ou sofra a dor das palavras incompletas!\"");
+                System.out.println(perguntas.get(indice));
+                System.out.print("Sua resposta: ");
+                respostaJogador = scanner.nextLine().toLowerCase().trim();
 
-        if (respostaJogador.equalsIgnoreCase(respostas.get(indice))) {
-            System.out.println("Verbatim se desfaz em milhares de letras, libertando sua essência.");
-            System.out.println("No ar, uma palavra dourada começa a brilhar intensamente.");
-            System.out.println("✨ Você obteve o Fragmento da Linguagem!");
-            Verbatim = true;
-        } else {
-            dano = random.nextInt(3) + 2;
-            vida -= dano;
-            System.out.println("As palavras de Verbatim explodem em sua direção!");
-            System.out.println("Sua vida agora é: " + vida);
-            System.out.println("Verbatim repete a pergunta…");
-        }
-                } while (!Verbatim);
+                if (respostaJogador.equalsIgnoreCase(respostas.get(indice))) {
+                    System.out.println("Verbatim se desfaz em milhares de letras, libertando sua essência.");
+                    System.out.println("No ar, uma palavra dourada começa a brilhar intensamente.");
+                    System.out.println("✨ Você obteve o Fragmento da Linguagem!");
+                    Verbatim = true;
+                } else {
+                    dano = random.nextInt(3) + 2;
+                    vida -= dano;
+                    System.out.println("As palavras de Verbatim explodem em sua direção!");
+                    System.out.println("Sua vida agora é: " + vida);
+                    System.out.println("Verbatim repete a pergunta…");
+                }
+            } while (!Verbatim);
 
 
-    scanner.nextLine();
-    System.out.println("O fragmento recém-obtido reage com o ambiente.");
-    System.out.println("Frases se alinham, formando um portal brilhante à sua frente.");
-    scanner.nextLine();
+            scanner.nextLine();
+            System.out.println("O fragmento recém-obtido reage com o ambiente.");
+            System.out.println("Frases se alinham, formando um portal brilhante à sua frente.");
+            scanner.nextLine();
 
-    System.out.println("Ao atravessá-lo, você chega a uma sala gigantesca feita inteiramente de texto flutuante.");
-    scanner.nextLine();
+            System.out.println("Ao atravessá-lo, você chega a uma sala gigantesca feita inteiramente de texto flutuante.");
+            scanner.nextLine();
 
-    System.out.println("No centro, sentado em um trono de livros reescritos… está o Guardião VARCHAR.");
-    System.out.println("Seu corpo é feito de palavras vivas, que mudam a cada segundo.");
-    scanner.nextLine();
+            System.out.println("No centro, sentado em um trono de livros reescritos… está o Guardião VARCHAR.");
+            System.out.println("Seu corpo é feito de palavras vivas, que mudam a cada segundo.");
+            scanner.nextLine();
 
-    System.out.println("Guardião VARCHAR: \"Humano… veio tentar restaurar o sentido deste vale?\"");
-    System.out.println("Guardião VARCHAR: \"Mostre que domina as palavras, limites e tamanhos variáveis.\"");
-    scanner.nextLine();
+            System.out.println("Guardião VARCHAR: \"Humano… veio tentar restaurar o sentido deste vale?\"");
+            System.out.println("Guardião VARCHAR: \"Mostre que domina as palavras, limites e tamanhos variáveis.\"");
+            scanner.nextLine();
             // BOSS
-    int vidaBoss = 20;
+            int vidaBoss = 20;
 
-    ArrayList<String> perguntasBoss = new ArrayList<>();
-    ArrayList<String> respostasBoss = new ArrayList<>();
+            ArrayList<String> perguntasBoss = new ArrayList<>();
+            ArrayList<String> respostasBoss = new ArrayList<>();
 
-    perguntasBoss.add("Que tipo de dado é ideal para armazenar nomes e textos curtos?");
-    respostasBoss.add("varchar");
+            perguntasBoss.add("Que tipo de dado é ideal para armazenar nomes e textos curtos?");
+            respostasBoss.add("varchar");
 
-    perguntasBoss.add("VARCHAR armazena texto com tamanho fixo ou variável?");
-    respostasBoss.add("variavel");
+            perguntasBoss.add("VARCHAR armazena texto com tamanho fixo ou variável?");
+            respostasBoss.add("variavel");
 
-    perguntasBoss.add("VARCHAR é mais eficiente que CHAR quando os textos têm tamanhos diferentes?");
-    respostasBoss.add("sim");
+            perguntasBoss.add("VARCHAR é mais eficiente que CHAR quando os textos têm tamanhos diferentes?");
+            respostasBoss.add("sim");
 
-    perguntasBoss.add("Ao criar uma coluna VARCHAR, é necessário definir um tamanho máximo?");
-    respostasBoss.add("sim");
+            perguntasBoss.add("Ao criar uma coluna VARCHAR, é necessário definir um tamanho máximo?");
+            respostasBoss.add("sim");
 
-    for (int i = 0; i < perguntasBoss.size() && vidaBoss > 0 && vida > 0; i++) {
+            for (int i = 0; i < perguntasBoss.size() && vidaBoss > 0 && vida > 0; i++) {
 
-        System.out.println();
-        System.out.println("Vida do Guardião VARCHAR: " + vidaBoss);
-        System.out.println("Guardião VARCHAR: \"" + perguntasBoss.get(i) + "\"");
-        System.out.print("Sua resposta: ");
-        String resposta = scanner.nextLine().toLowerCase().trim();
+                System.out.println();
+                System.out.println("Vida do Guardião VARCHAR: " + vidaBoss);
+                System.out.println("Guardião VARCHAR: \"" + perguntasBoss.get(i) + "\"");
+                System.out.print("Sua resposta: ");
+                String resposta = scanner.nextLine().toLowerCase().trim();
 
-        if (resposta.equalsIgnoreCase(respostasBoss.get(i))) {
-            vidaBoss -= 5;
-            System.out.println("As palavras ao redor tremem — você atingiu o Guardião com precisão!");
-            System.out.println("Vida do Guardião VARCHAR: " + vidaBoss);
-        } else {
-            dano = random.nextInt(5) + 3;
-            vida -= dano;
-            System.out.println("O Guardião dispara uma enxurrada de caracteres instáveis!");
-            System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
-            System.out.println("Date: \"Errou! Lembre-se da natureza variável do VARCHAR!\"");
+                if (resposta.equalsIgnoreCase(respostasBoss.get(i))) {
+                    vidaBoss -= 5;
+                    System.out.println("As palavras ao redor tremem — você atingiu o Guardião com precisão!");
+                    System.out.println("Vida do Guardião VARCHAR: " + vidaBoss);
+                } else {
+                    dano = random.nextInt(5) + 3;
+                    vida -= dano;
+                    System.out.println("O Guardião dispara uma enxurrada de caracteres instáveis!");
+                    System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
+                    System.out.println("Date: \"Errou! Lembre-se da natureza variável do VARCHAR!\"");
+                }
+            }
+
+            if (vidaBoss <= 0) {
+                System.out.println();
+                System.out.println("Guardião VARCHAR: \"Minhas palavras… finalmente… fazem sentido novamente…\"");
+                System.out.println("Ele se desfaz em uma chuva de frases brilhantes.");
+                System.out.println("Date: \"Você conseguiu, " + nome + "! O Vale das Strings está restaurado.\"");
+            }
+
         }
     }
 
-    if (vidaBoss <= 0) {
-        System.out.println();
-        System.out.println("Guardião VARCHAR: \"Minhas palavras… finalmente… fazem sentido novamente…\"");
-        System.out.println("Ele se desfaz em uma chuva de frases brilhantes.");
-        System.out.println("Date: \"Você conseguiu, " + nome + "! O Vale das Strings está restaurado.\"");
-    }
-
-}
-    }
-
-    public static void Date(){
+    public static void Date() {
         System.out.println("4");
     }
+
     public static void jogarDate(String nome, int vidaAtual) {
 
         Scanner scanner = new Scanner(System.in);
@@ -941,4 +941,73 @@ public class Jogo{
         String respostaJogador;
         int ecos = 2;
         int indice;
+
+        while (ecos > 0 && vida > 0) {
+
+            indice = random.nextInt(perguntas.size());
+
+            System.out.println("\nUm Eco de Tempo sussurra com vozes de várias épocas:");
+            System.out.println(perguntas.get(indice));
+            System.out.print("Sua resposta: ");
+            respostaJogador = scanner.nextLine().toLowerCase().trim();
+
+            if (respostaJogador.contains(respostas.get(indice))) {
+                System.out.println("O Eco se desfaz como poeira de relógio. Você superou a distorção temporal!");
+                ecos--;
+            } else {
+                dano = random.nextInt(3) + 2;
+                vida -= dano;
+                System.out.println("O Eco se rompe e explode em estilhaços de tempo!");
+                System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
+                System.out.println("Date: \"Concentre-se! DATE envolve datas completas, não confunda!\"");
+            }
+        }
+
+        if (vida <= 0) {
+            System.out.println("\nVocê é consumido por uma fenda temporal...");
+            System.out.println("Sua jornada termina aqui.");
+            return;
+        }
+
+        System.out.println("\nApós derrotar os Ecos, uma fenda azulada se abre no centro do salão.");
+        System.out.println("Dela emerge uma figura igual à Date — mas com olhos rachados como vidros antigos.");
+        scanner.nextLine();
+
+        System.out.println("Date (parte boa): \"Essa é… minha outra metade. A Sombra Cronável.\"");
+        System.out.println("A criatura abre um sorriso distorcido, como se várias versões dela estivessem falando ao mesmo tempo.");
+        scanner.nextLine();
+
+        boolean sombraDerrotada = false;
+
+        do {
+            indice = random.nextInt(perguntas.size());
+            System.out.println("\nSombra Cronável: \"O tempo… é meu. Tudo pertence a mim. Responda, mortal!\"");
+            System.out.println(perguntas.get(indice));
+            System.out.print("Sua resposta: ");
+            respostaJogador = scanner.nextLine().toLowerCase().trim();
+
+            if (respostaJogador.contains(respostas.get(indice))) {
+                System.out.println("A Sombra Cronável se desfaz em estilhaços de relógios!");
+                System.out.println("Date: \"Muito bem... aquela era a corrupção mais superficial. Mas agora...\"");
+                sombraDerrotada = true;
+            }else {
+                dano = random.nextInt(3) + 2;
+                vida -= dano;
+                System.out.println("A Sombra Cronável altera sua linha temporal e ataca!");
+                System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
+                System.out.println("Sombra Cronável: \"O tempo te devorará!\"");
+            }
+        } while (!sombraDerrotada && vida > 0);
+
+        if (vida <= 0) {
+            System.out.println("\nA Sombra Cronável consome sua existência...");
+            System.out.println("Fim do jogo.");
+            return;
+        }
+
+        System.out.println("\nA Sombra se desfaz, e o salão inteiro treme.");
+        System.out.println("Date: \"É aqui que ela está… o meu núcleo corrompido. O verdadeiro Guardião deste andar.\"");
+        scanner.nextLine();
+        }
+    }
 }
