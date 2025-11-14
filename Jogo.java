@@ -1008,6 +1008,58 @@ public class Jogo {
         System.out.println("\nA Sombra se desfaz, e o salão inteiro treme.");
         System.out.println("Date: \"É aqui que ela está… o meu núcleo corrompido. O verdadeiro Guardião deste andar.\"");
         scanner.nextLine();
+
+        // BOSS — Guardião DATE
+        System.out.println("Um gigante formado de areia invertida e engrenagens surge.");
+        System.out.println("Seus olhos giram como ponteiros enlouquecidos.");
+        System.out.println("Guardião DATE: \"O TEMPO NÃO OBEDECE MAIS A VOCÊS!\"");
+        scanner.nextLine();
+
+        int vidaBoss = 20;
+
+        ArrayList<String> perguntasBoss = new ArrayList<>();
+        ArrayList<String> respostasBoss = new ArrayList<>();
+
+        perguntasBoss.add("O que um campo DATE representa normalmente?");
+        respostasBoss.add("data completa");
+
+        perguntasBoss.add("Qual formato é frequentemente usado em DATE? (ex: 2024-01-05)");
+        respostasBoss.add("yyyy mm dd");
+
+        perguntasBoss.add("Por que datas são importantes em sistemas?");
+        respostasBoss.add("organizar eventos");
+
+        perguntasBoss.add("DATE armazena que tipo de informação?");
+        respostasBoss.add("data");
+
+        for (int i = 0; i < perguntasBoss.size() && vidaBoss > 0 && vida > 0; i++) {
+
+            System.out.println("\nVida do Guardião DATE: " + vidaBoss);
+            System.out.println("Guardião DATE: \"" + perguntasBoss.get(i) + "\"");
+            System.out.print("Sua resposta: ");
+            String resp = scanner.nextLine().toLowerCase().trim();
+
+            if (resp.contains(respostasBoss.get(i))) {
+                vidaBoss -= 5;
+                System.out.println("A areia do Guardião racha! Você afetou sua linha temporal!");
+            } else {
+                dano = random.nextInt(5) + 3;
+                vida -= dano;
+                System.out.println("O Guardião retrocede no tempo e atinge você antes do ataque!");
+                System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
+            }
+        }
+
+        if (vidaBoss <= 0) {
+            System.out.println("\n Guardião DATE: \"O… tempo… retorna… ao fluxo… correto…\"");
+            System.out.println("O gigante se desfaz em um turbilhão dourado.");
+            System.out.println("Date: \"Obrigada, " + nome + "... agora sou completa novamente.\"");
+            System.out.println("✨ Você obteve o FRAGMENTO DO TEMPO! ✨");
+        } else {
+            System.out.println("\nVocê cai, perdido entre eras...");
+            System.out.println("Fim da jornada.");
+        }
+    }
         }
     }
 }
