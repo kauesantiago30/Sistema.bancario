@@ -1077,7 +1077,7 @@ public class Jogo{
             public static void ChefeFinal(){
         class JogarChefe{
             public static void ChefeFinal(int vidaAtual,String nome){
-                System.out.println("");
+                System.out.println("Bem vindo ao desafio final");
 
             }
 
