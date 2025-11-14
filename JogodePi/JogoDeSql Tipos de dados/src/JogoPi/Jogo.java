@@ -840,7 +840,7 @@ public class Jogo{
                 System.out.println("Guardião VARCHAR: \"Humano… veio tentar restaurar o sentido deste vale?\"");
                 System.out.println("Guardião VARCHAR: \"Mostre que domina as palavras, limites e tamanhos variáveis.\"");
                 scanner.nextLine();
-                // BOSS
+
                 int vidaBoss = 20;
 
                 ArrayList<String> perguntasBoss = new ArrayList<>();
@@ -860,7 +860,6 @@ public class Jogo{
 
                 for (
                         int i = 0; i < perguntasBoss.size() && vidaBoss > 0 && vida > 0; i++) {
-
                     System.out.println();
                     System.out.println("Vida do Guardião VARCHAR: " + vidaBoss);
                     System.out.println("Guardião VARCHAR: \"" + perguntasBoss.get(i) + "\"");
@@ -879,7 +878,6 @@ public class Jogo{
                         System.out.println("Date: \"Errou! Lembre-se da natureza variável do VARCHAR!\"");
                     }
                 }
-
                 if (vidaBoss <= 0) {
                     System.out.println();
                     System.out.println("Guardião VARCHAR: \"Minhas palavras… finalmente… fazem sentido novamente…\"");
@@ -889,17 +887,13 @@ public class Jogo{
                     System.out.println("Parabens, voce conseguiu mais um fragmento");
                     pedacos++;
                     System.out.println("Voce tem" + pedacos + " fragmentos");
-
                 }
-
             }
          }
        }
-
     public static void Date(){
     class JogoDate {
         public static void jogarDate(String nome, int vidaAtual, int pedacos) {
-
 
             Scanner scanner = new Scanner(System.in);
             Random random = new Random();
@@ -950,7 +944,6 @@ public class Jogo{
             while (ecos > 0 && vida > 0) {
 
                 indice = random.nextInt(perguntas.size());
-
 
                 System.out.println("\nUm Eco de Tempo sussurra com vozes de várias épocas:");
                 System.out.println(perguntas.get(indice));
@@ -1012,7 +1005,6 @@ public class Jogo{
                 return;
             }
 
-
             System.out.println("\nA Sombra se desfaz, e o salão inteiro treme.");
             System.out.println("Date: \"É aqui que ela está… o meu núcleo corrompido. O verdadeiro Guardião deste andar.\"");
             scanner.nextLine();
@@ -1057,7 +1049,6 @@ public class Jogo{
                     System.out.println("Você sofre " + dano + " de dano! Vida atual: " + vida);
                 }
             }
-
             if (vidaBoss <= 0) {
                 System.out.println("\nGuardião DATE: \"O… tempo… retorna… ao fluxo… correto…\"");
                 System.out.println("O gigante se desfaz em um turbilhão dourado.");
