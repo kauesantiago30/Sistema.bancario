@@ -3,18 +3,20 @@ package JogoPi;
 import java.util.*;
 
 public class Jogo{
+
+
+
+
     public static void jogar() {
 
-
+        int pedacos =0;
         int vida = 15;
         int dano;
-
 
         String respostaJogador;
 
         ArrayList<String> perguntas = new ArrayList<>();
         ArrayList<String> respostas = new ArrayList<>();
-
 
         //  Perguntas sobre o tipo INT
         perguntas.add("O tipo de dado INT em SQL é usado para armazenar que tipo de valor?");
@@ -35,16 +37,13 @@ public class Jogo{
         perguntas.add("Qual tipo de dado é mais indicado para contar a quantidade de registros em uma tabela?");
         respostas.add("int");
 
-
         //  Sistema de sorteio da pergunta
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
 
-
         //Essa linha escolhe aleatoriamente uma posição dentro do ArrayList e guarda esse número na variável indice.
         //Depois, você usa o indice pra buscar a pergunta e a resposta.
         int indice = random.nextInt(perguntas.size());
-
 
         System.out.println("");
         System.out.println("");
@@ -53,11 +52,9 @@ public class Jogo{
         System.out.println("Digite seu nome:");
         String nome = scanner.nextLine();
 
-
         System.out.println("");
         System.out.println("");
         System.out.println("");
-
 
         System.out.println("Cinco pilares... Cinco dados... Um código quebrado.");
         scanner.nextLine(); // Espera o jogador apertar ENTER
@@ -84,13 +81,11 @@ public class Jogo{
         System.out.println(">>> Missão Iniciada: O Chamado dos Guardiões <<<");
         scanner.nextLine();
 
-
         System.out.println("");
         System.out.println("");
         System.out.println("");
         System.out.println("");
         System.out.println("");
-
 
         System.out.println(nome + "," + nome);
         System.out.println(nome + ": Descupla, acho que acabei dormindo");
@@ -153,7 +148,6 @@ public class Jogo{
         System.out.println("");
         System.out.println("");
 
-
         while(vida > 0){
 
             System.out.println(">>> MISSÃO 1 INICIADA: O ECO DE INT <<<");
@@ -163,7 +157,6 @@ public class Jogo{
             System.out.println("");
             System.out.println("");
 
-            ;
             scanner.nextLine();
             System.out.println();
             System.out.println("Você dá o primeiro passo dentro da Caverna Binária.");
@@ -186,7 +179,6 @@ public class Jogo{
             System.out.println("Date: \"Cuidado! É um Soldado Binário — ele testa a lógica de quem invade este domínio.\"");
             scanner.nextLine();
 
-
             boolean InimigoVivo = true;
 
             while (InimigoVivo) {
@@ -199,7 +191,6 @@ public class Jogo{
                 System.out.print("Digite o número da sua resposta: ");
                 int resposta = scanner.nextInt();
                 scanner.nextLine();
-
 
                 if (resposta == 2) {
                     System.out.println();
@@ -240,7 +231,6 @@ public class Jogo{
             System.out.println("Date: \"Este é o próximo teste. Cuidado ele é implacável com erros de tipo!\"");
             scanner.nextLine();
 
-
             boolean respostaCorreta = false;
 
             do {
@@ -273,7 +263,6 @@ public class Jogo{
                 }
             } while (!respostaCorreta && vida > 0);
 
-
             System.out.println();
             System.out.println("Você respira fundo e atravessa o portal aberto pelos fragmentos do Golem dos Inteiros...");
             scanner.nextLine();
@@ -297,7 +286,6 @@ public class Jogo{
             System.out.println("2. Ignorar o baú e seguir em frente.");
             System.out.print("O que você deseja fazer? ");
 
-
             int escolha = scanner.nextInt();
             scanner.nextLine();
             System.out.println();
@@ -306,21 +294,17 @@ public class Jogo{
                 System.out.println("Você se aproxima lentamente do baú...");
                 System.out.println("Símbolos de 0 e 1 dançam ao redor da tampa, emitindo um brilho dourado.");
                 scanner.nextLine();
-
                 System.out.println("Você estende a mão e o abre cuidadosamente...");
                 System.out.println("De dentro, sai uma nevoa escura, formando uma especie de tentaculo");
                 System.out.println("Que entao te puxa para dentro do bau.");
                 System.out.println("Ao abrir os olhos, voce ve que foi teleportado para uma arena em ruinas");
-
                 System.out.println("O chão se fragmenta em placas luminosas flutuantes, formando uma arena circular no centro do abismo digital.");
                 System.out.println("Correntes de números decimais giram ao redor, criando um redemoinho de dados instáveis.");
                 scanner.nextLine();
-
                 System.out.println("De repente, dois portais menores se abrem ao seu redor...");
                 System.out.println("Deles caem criaturas pequenas, deformadas, com olhos brilhando em verde e códigos piscando pelo corpo.");
                 System.out.println("Date: \"Atenção! São Goblins de Dados! Criaturas geradas a partir de variáveis corrompidas!\"");
                 scanner.nextLine();
-
                 System.out.println("Os goblins se movem rápido, chiando palavras distorcidas em binário.");
                 System.out.println("??? : \"I...n..t..e..i...r...o ERR0! ERR0!\"");
                 System.out.println("Date: \"Eles parecem instáveis! Cada um carrega um fragmento de código ligado ao tipo FLOAT!\"");
@@ -378,10 +362,7 @@ public class Jogo{
 
                         }
 
-
                     }
-
-
                     if (goblins == 0) {
                         System.out.println("Ao derrotar os dois goblins,uma magia de invisibilidade é quebrada");
                         System.out.println("Revelando um bau no meio da arena");
@@ -395,11 +376,7 @@ public class Jogo{
                         System.out.println("Sua vida agora é: " + vida);
                         scanner.nextLine();
                     }
-
-
                 }
-
-
                 System.out.println();
                 System.out.println("Com os dois Goblins derrotados, a arena começa a se desfazer em partículas luminosas.");
                 System.out.println("O chão volta a ser sólido e o vento digital cessa.");
@@ -463,11 +440,7 @@ public class Jogo{
                     System.out.println("Sua vida agora é: " + vida);
                     System.out.println("Date: \"Errou! Lembre-se, o tipo INT não aceita textos nem decimais!\"");
                 }
-
-
             }
-
-
             System.out.println("Guardião Int: \"Ouvi rumores... o mago real ainda vive, escondido nos andares mais profundos...\"");
             System.out.println("Guardião Int: \"Purifique os outros Guardiões... e talvez o Reino dos Dados seja restaurado.\"");
             System.out.println("O corpo dele se desfaz em fragmentos de dados, deixando um portal brilhante atrás de si.");
@@ -479,9 +452,11 @@ public class Jogo{
             System.out.println("Guardião Int: \"...Integridade restaurada... Obrigado, guerreiro da lógica...\"");
             System.out.println("O corpo dele se desfaz em fragmentos de dados, deixando um portal brilhante atrás de si.");
             System.out.println("Date: \"Você conseguiu, " + nome + "! O primeiro Guardião foi purificado.\"");
+            System.out.println("Date: Com isso, você conseguiu o fragmento dos inteiros");
             scanner.nextLine();
-
-
+            System.out.println("Junte o fragmento de todos os guardiões, para enfrentar o desafio final");
+            pedacos++;
+            scanner.nextLine();
 
             System.out.println("Então um portal se abre um sua frente");
             System.out.println("Ao adentrar no portal, voce se depara com quatro portas");
@@ -489,54 +464,57 @@ public class Jogo{
             System.out.println("2- Biblioteca das Palavras Infinitas");
             System.out.println("3- Jardim das Eras");
             System.out.println("4- Templo das Duas Verdades");
-            System.out.println("Para onde voce quer ir?");
+
 
             int opcao = scanner.nextInt();
 
+            ArrayList<Integer> andares = new ArrayList<>();
+            andares.add(1);
+            andares.add(2);
+            andares.add(3);
 
+            while (!andares.isEmpty()) {
+                System.out.println("Para onde voce quer ir?");
 
+                // Mostrar só os andares restantes
+                for (Integer a : andares) {
+                    System.out.println(a + " - Andar " + a);
+                }
 
+                opcao = scanner.nextInt();
+                scanner.nextLine(); // limpar buffer
 
-            switch (opcao) {
-                case 1:
-                    Float();
-                    break;
-                case 2:
-                    Boolean();
-                    break;
-                case 3:
-                    Varchar();
-                    break;
-                case 4:
-                    Date();
-                    break;
+                if (!andares.contains(escolha)) {
+                    System.out.println("Esse andar já foi ou não existe!");
+                    continue;
+                }
 
+                // --- SWITCH CASE REAL ---
+                switch (escolha) {
+                    case 1:
+                         Float();
+                        break;
 
+                    case 2:
+                        Varchar();
+                        break;
+
+                    case 3:
+                        Date();
+                        break;
+                }
+
+                // remover o andar que terminou
+                andares.remove(Integer.valueOf(escolha));
             }
 
-
-
         }
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
     public static void Float(){
-
 
         class JogoFloat {
 
-            public static void jogarFloat(String nome, int vidaAtual) {
+            public static void jogarFloat(String nome, int vidaAtual, int pedacos) {
 
                 Scanner scanner = new Scanner(System.in);
                 Random random = new Random();
@@ -583,19 +561,17 @@ public class Jogo{
                 perguntas.add("FLOAT é mais indicado para valores aproximados ou exatos?");
                 respostas.add("aproximados");
 
-
                 System.out.println();
                 System.out.println("Enquanto você caminha, pequenas esferas luminosas se erguem das poças.");
                 System.out.println("Elas se juntam, formando criaturas translúcidas — são os *Fragmentos de Precisão!*");
                 System.out.println("Date: \"Essas entidades testarão sua capacidade de compreender o equilíbrio decimal.\"");
                 scanner.nextLine();
 
-
                 String respostaJogador;
+
                 int fragmentos = 2;
                 int indice = random.nextInt(perguntas.size());
                 while (fragmentos > 0 && vida > 0) {
-
 
                     System.out.println();
                     System.out.println("Um Fragmento de Precisão surge diante de você e sussurra:");
@@ -621,7 +597,6 @@ public class Jogo{
                     System.out.println("O Vale dos Decimais se apaga em silêncio. Sua jornada termina aqui.");
                     return;
                 }
-
                 System.out.println();
                 System.out.println("Com os Fragmentos derrotados, uma ponte líquida surge diante de você.");
                 System.out.println("Ao atravessá-la, o ambiente muda — o ar fica pesado, e ondas de energia oscilam em padrões caóticos.");
@@ -634,9 +609,7 @@ public class Jogo{
 
                 boolean Fluturis = false;
 
-
                 do {
-
 
                     System.out.println("Seu corpo parece tentar se manter estável, mas as bordas tremem, como se estivesse sempre entre dois valores.");
                     System.out.println("O nome dela é “Flutuaris, o Instável” — um monstro criado a partir de cálculos perdidos, fragmentos de precisão que o Feitiço Corruptom distorceu.");
@@ -725,17 +698,15 @@ public class Jogo{
                     System.out.println("Guardião FLOAT: \"O erro... foi corrigido...\"");
                     System.out.println("O corpo dele se dissolve em mil partículas de luz dourada, restaurando a calma do vale.");
                     System.out.println("Date: \"Você conseguiu, " + nome + "! Outro Guardião foi liberto.\"");
+                    scanner.nextLine();
+                    System.out.println("Parabens, voce conseguiu mais um fragmento");
+                    pedacos++;
+                    System.out.println("Voce tem" + pedacos + " fragmentos");
                 }
 
             }
         }
 
-
-    }
-
-
-    public static void Boolean(){
-        System.out.println("2");
     }
 
     public static void Varchar(){
@@ -745,10 +716,5 @@ public class Jogo{
     public static void Date(){
         System.out.println("4");
     }
-
-
-
-
-
 
 }
